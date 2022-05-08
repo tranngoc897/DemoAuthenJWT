@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: au-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/audb?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+security:
+  jwt:
+    public-key: classpath:public.txt
+    key-store: classpath:keystore.jks
+    key-store-password: letmein
+    key-pair-alias: mytestkey
+    key-pair-password: changeme
+
+server:
+  servlet:
+    context-path: /uaa
+  port: 8080
