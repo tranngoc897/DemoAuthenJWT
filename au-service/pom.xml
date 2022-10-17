@@ -97,6 +97,28 @@
         </dependency>
 
     </dependencies>
-
+    We also had to set main class in the JAR manifest. We achieve it using spring-boot-maven-plugin in module pom.xml.
+    The fragment is visible below. We also set build finalName to
+    cut off version number from target JAR file. Dockerfile and maven build definition is pretty similar for all other microservices.
+    <build>
+        <finalName>account-service</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>pl.piomin.microservices.account.Application</mainClass>
+                    <addResources>true</addResources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
