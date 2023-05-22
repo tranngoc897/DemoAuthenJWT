@@ -27,3 +27,9 @@ server:
   servlet:
     context-path: /uaa
   port: 8080
+
+jwt:
+  private:
+    key: classpath:app.key
+  public:
+    key: classpath:app.pub

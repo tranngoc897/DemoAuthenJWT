@@ -2,20 +2,17 @@ package vn.com.ibss.au.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import vn.com.ibss.au.dto.RoleDTO;
-import vn.com.ibss.au.dto.RoleRequestDTO;
-import vn.com.ibss.au.entity.Role;
 import vn.com.ibss.au.service.RoleService;
 import vn.ibss.common.base.BaseController;
-import vn.ibss.common.utils.AppConstants;
 
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/roles")

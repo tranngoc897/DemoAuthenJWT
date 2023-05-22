@@ -1,4 +1,4 @@
-package vn.com.ibss.au.utils;
+package vn.ibss.common.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;

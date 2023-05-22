@@ -1,3 +1,4 @@
+/*
 package vn.com.ibss.au;
 
 
@@ -145,4 +146,4 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
             throw new RuntimeException(e);
         }
     }
-}
+}*/

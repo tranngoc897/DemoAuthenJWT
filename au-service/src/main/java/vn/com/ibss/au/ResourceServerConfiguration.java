@@ -1,3 +1,4 @@
+/*
 package vn.com.ibss.au;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,3 +53,4 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     }
 
 }
+*/
