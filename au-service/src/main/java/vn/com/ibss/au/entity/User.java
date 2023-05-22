@@ -12,15 +12,13 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_info")
 @Getter
 @Setter
 @NoArgsConstructor
 public class User implements Serializable {
 
-//    private static final long serialVersionUID = 1L;
     @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "username")
     private String username;
@@ -30,12 +28,14 @@ public class User implements Serializable {
     private String email;
     @Column(name = "enabled")
     private boolean enabled;
-    @Column(name = "accountNonExpired")
+
+    @Column(name = "account_non_expired")
     private boolean accountNonExpired;
-    @Column(name = "credentialsNonExpired")
+    @Column(name = "credentials_non_expired")
     private boolean credentialsNonExpired;
-    @Column(name = "accountNonLocked")
+    @Column(name = "account_non_locked")
     private boolean accountNonLocked;
+
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
